@@ -3,15 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Yusei的博客</title>
+    <title>平衡二叉树(AVL树) | Yusei的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Yusei的博客">
-<meta property="og:url" content="https://yusei37.github.io/index.html">
+    <meta name="description" content="定义平衡二叉树，又被称为AVL树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。 算法实现（C/C++） 结构体定义1234567struct Node&amp;#123;    int data;     //结点的值    int height;   //结点高度    Node* lchild; //结点的左孩子    Node* rch">
+<meta name="keywords" content="树,平衡二叉树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="平衡二叉树(AVL树)">
+<meta property="og:url" content="https://yusei37.github.io/2018/06/23/平衡二叉-AVL-树/index.html">
 <meta property="og:site_name" content="Yusei的博客">
+<meta property="og:description" content="定义平衡二叉树，又被称为AVL树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。 算法实现（C/C++） 结构体定义1234567struct Node&amp;#123;    int data;     //结点的值    int height;   //结点高度    Node* lchild; //结点的左孩子    Node* rch">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yusei37.github.io/2018/06/23/平衡二叉-AVL-树/left.png">
+<meta property="og:image" content="https://yusei37.github.io/2018/06/23/平衡二叉-AVL-树/left_progress.png">
+<meta property="og:updated_time" content="2018-06-23T04:13:52.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yusei的博客">
+<meta name="twitter:title" content="平衡二叉树(AVL树)">
+<meta name="twitter:description" content="定义平衡二叉树，又被称为AVL树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。 算法实现（C/C++） 结构体定义1234567struct Node&amp;#123;    int data;     //结点的值    int height;   //结点高度    Node* lchild; //结点的左孩子    Node* rch">
+<meta name="twitter:image" content="https://yusei37.github.io/2018/06/23/平衡二叉-AVL-树/left.png">
     
 
     
@@ -182,16 +190,15 @@
 </aside>
 
             
-            <section id="main">
-    <article id="post-平衡二叉-AVL-树" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-平衡二叉-AVL-树" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
             <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/06/23/平衡二叉-AVL-树/">平衡二叉树(AVL树)</a>
+        <h1 class="article-title" itemprop="name">
+            平衡二叉树(AVL树)
         </h1>
     
 
@@ -340,139 +347,24 @@
         </footer>
     </div>
     
-</article>
-
-
-
-    <article id="post-一次SQL-Error" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+<nav id="article-nav">
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/06/10/一次SQL-Error/">一次SQL Error</a>
-        </h1>
     
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/06/10/一次SQL-Error/">
-            <time datetime="2018-06-10T04:28:11.000Z" itemprop="datePublished">2018-06-10</time>
+        <a href="/2018/06/10/一次SQL-Error/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">一次SQL Error</div>
         </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/数据库/">数据库</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Bug/">Bug</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="遇到问题：SQL-Error-1064-SQLState-42000"><a href="#遇到问题：SQL-Error-1064-SQLState-42000" class="headerlink" title="遇到问题：SQL Error: 1064, SQLState: 42000"></a>遇到问题：SQL Error: 1064, SQLState: 42000</h2><p>今天在使用JavaEE连接MySQL数据库插入数据时，遇到了如下问题：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARN SQL Error: <span class="number">1064</span>, SQLState: <span class="number">42000</span></span><br><span class="line">ERROR  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version <span class="keyword">for</span> the right syntax to use near <span class="string">'group(..., order) values (...,  1)'</span> at line <span class="number">1</span></span><br></pre></td></tr></table></figure></p></p>
-            <p class="article-more-link">
-                <a href="/2018/06/10/一次SQL-Error/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://yusei37.github.io/2018/06/10/一次SQL-Error/" data-id="cjiqvqeai0000q4o0dclpnty8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
+</nav>
 
-        </footer>
-    </div>
+
     
 </article>
 
+
+    
+    
 
 </section>
             
