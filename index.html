@@ -225,40 +225,10 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>平衡二叉树，又被称为AVL树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。</p>
-<h2 id="算法实现（C-C-）"><a href="#算法实现（C-C-）" class="headerlink" title="算法实现（C/C++）"></a>算法实现（C/C++）</h2><ul>
-<li><h3 id="结构体定义"><a href="#结构体定义" class="headerlink" title="结构体定义"></a>结构体定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;     <span class="comment">//结点的值</span></span><br><span class="line">    <span class="keyword">int</span> height;   <span class="comment">//结点高度</span></span><br><span class="line">    Node* lchild; <span class="comment">//结点的左孩子</span></span><br><span class="line">    Node* rchild; <span class="comment">//结点的右孩子</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h3 id="创建一个新结点"><a href="#创建一个新结点" class="headerlink" title="创建一个新结点"></a>创建一个新结点</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Node* <span class="title">newNode</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node* node = <span class="keyword">new</span> Node;</span><br><span class="line">    node-&gt;data = x;</span><br><span class="line">    node-&gt;height = <span class="number">1</span>;</span><br><span class="line">    node-&gt;rchild = <span class="literal">NULL</span>;</span><br><span class="line">    node-&gt;lchild = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h3 id="获取结点的高度"><a href="#获取结点的高度" class="headerlink" title="获取结点的高度"></a>获取结点的高度</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getHeight</span><span class="params">(Node* root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> root-&gt;height;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h3 id="获取结点的平衡因子（左子树高度-右子数高度）"><a href="#获取结点的平衡因子（左子树高度-右子数高度）" class="headerlink" title="获取结点的平衡因子（左子树高度-右子数高度）"></a>获取结点的平衡因子（左子树高度-右子数高度）</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getBalanceFactor</span><span class="params">(Node* root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> getHeight(root-&gt;lchild) - getHeight(root-&gt;rchild); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h3 id="更新结点高度"><a href="#更新结点高度" class="headerlink" title="更新结点高度"></a>更新结点高度</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updateHeight</span><span class="params">(Node* root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    root-&gt;height = max(getHeight(root-&gt;lchild), getHeight(root-&gt;rchild)) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>AVL树的插入形式同普通二叉树，不同的是AVL树每次插入后，如果平衡因子到达2则需要进行平衡操作</p>
-<ul>
-<li><h4 id="以左旋操作为例"><a href="#以左旋操作为例" class="headerlink" title="以左旋操作为例"></a>以左旋操作为例</h4><p><img src="/2018/06/23/平衡二叉-AVL-树/left.png" alt="左旋示意图，图片来源《算法笔记》"></p>
-<p> 具体步骤如下：</p>
-<ol>
-<li>让B的左子树成为A的右子树</li>
-<li>让A成为B的左子树</li>
-<li>将根结点设为B</li>
-</ol>
-<p><img src="/2018/06/23/平衡二叉-AVL-树/left_progress.png" alt="左旋过程示意图，图片来源《算法笔记》"></p>
-<p>右旋操作也是类似的。</p>
-<p>LL型，平衡时只需要进行一次右旋操作即可，LR型先平衡左子树，再平衡根树，即先对左子树进行一次左旋,再对根树进行一次右旋。RR型，RL型同理。</p>
-<p>具体代码如下:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(Node* &amp;root, <span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        root = newNode(x);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (root-&gt;data &gt; x) &#123;</span><br><span class="line">        insert(root-&gt;lchild, x);</span><br><span class="line">        updateHeight(root);</span><br><span class="line">        <span class="keyword">if</span> (getBalanceFactor(root) == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (getBalanceFactor(root-&gt;lchild) == <span class="number">1</span>) &#123;</span><br><span class="line">                R(root);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                L(root-&gt;lchild);</span><br><span class="line">                R(root);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        insert(root-&gt;rchild, x);</span><br><span class="line">        updateHeight(root);</span><br><span class="line">        <span class="keyword">if</span> (getBalanceFactor(root) == <span class="number">-2</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (getBalanceFactor(root-&gt;rchild) == <span class="number">-1</span>) &#123;</span><br><span class="line">                L(root);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                R(root-&gt;rchild);</span><br><span class="line">                L(root);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><h3 id="创建一棵AVL树"><a href="#创建一棵AVL树" class="headerlink" title="创建一棵AVL树"></a>创建一棵AVL树</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Node* <span class="title">create</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; data)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node* root = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; data.size(); ++i) &#123;</span><br><span class="line">        insert(root, data[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
+            <p><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>平衡二叉树，又被称为AVL树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。</p></p>
+            <p class="article-more-link">
+                <a href="/2018/06/23/平衡二叉-AVL-树/#more">查看更多</a>
+            </p>
         
         </div>
         <footer class="article-footer">
@@ -268,7 +238,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/06/23/平衡二叉-AVL-树/" data-id="cjiqvqear0002q4o0xw45xxmh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/06/23/平衡二叉-AVL-树/" data-id="cjiqw7sue0002rko0oigzy1e9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -399,7 +369,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/06/10/一次SQL-Error/" data-id="cjiqvqeai0000q4o0dclpnty8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/06/10/一次SQL-Error/" data-id="cjiqw7su60000rko074dj91cz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
