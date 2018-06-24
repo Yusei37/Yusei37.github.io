@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>一次SQL Error | Yusei的博客</title>
+    <title>并查集 | Yusei的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="遇到问题：SQL Error: 1064, SQLState: 42000今天在使用JavaEE连接MySQL数据库插入数据时，遇到了如下问题：12WARN SQL Error: 1064, SQLState: 42000ERROR  You have an error in your SQL syntax; check the manual that corresponds to your My">
-<meta name="keywords" content="Bug">
+    <meta name="description" content="定义并查集是一种树型的数据结构，用于处理一些不相交集合的合并及查询问题。常常在使用中以森林来表示。它的名字中“并”、“查”、“集”分别取字union、find、set这3个单词。它支持以下三种操作：  初始化：将集合中的每一个元素都初始化为只有一个单元素的子集合。  查找：查找集合中某个元素所在的子集合，并返回该子集合的名称。  合并：将两个集合合并。">
+<meta name="keywords" content="树,森林,并查集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一次SQL Error">
-<meta property="og:url" content="https://yusei37.github.io/2018/06/10/一次SQL-Error/index.html">
+<meta property="og:title" content="并查集">
+<meta property="og:url" content="https://yusei37.github.io/2018/06/24/并查集/index.html">
 <meta property="og:site_name" content="Yusei的博客">
-<meta property="og:description" content="遇到问题：SQL Error: 1064, SQLState: 42000今天在使用JavaEE连接MySQL数据库插入数据时，遇到了如下问题：12WARN SQL Error: 1064, SQLState: 42000ERROR  You have an error in your SQL syntax; check the manual that corresponds to your My">
+<meta property="og:description" content="定义并查集是一种树型的数据结构，用于处理一些不相交集合的合并及查询问题。常常在使用中以森林来表示。它的名字中“并”、“查”、“集”分别取字union、find、set这3个单词。它支持以下三种操作：  初始化：将集合中的每一个元素都初始化为只有一个单元素的子集合。  查找：查找集合中某个元素所在的子集合，并返回该子集合的名称。  合并：将两个集合合并。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-10T04:40:04.783Z">
+<meta property="og:updated_time" content="2018-06-24T08:36:05.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一次SQL Error">
-<meta name="twitter:description" content="遇到问题：SQL Error: 1064, SQLState: 42000今天在使用JavaEE连接MySQL数据库插入数据时，遇到了如下问题：12WARN SQL Error: 1064, SQLState: 42000ERROR  You have an error in your SQL syntax; check the manual that corresponds to your My">
+<meta name="twitter:title" content="并查集">
+<meta name="twitter:description" content="定义并查集是一种树型的数据结构，用于处理一些不相交集合的合并及查询问题。常常在使用中以森林来表示。它的名字中“并”、“查”、“集”分别取字union、find、set这3个单词。它支持以下三种操作：  初始化：将集合中的每一个元素都初始化为只有一个单元素的子集合。  查找：查找集合中某个元素所在的子集合，并返回该子集合的名称。  合并：将两个集合合并。">
     
 
     
@@ -187,7 +187,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-一次SQL-Error" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-并查集" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -195,7 +195,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            一次SQL Error
+            并查集
         </h1>
     
 
@@ -204,8 +204,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/06/10/一次SQL-Error/">
-            <time datetime="2018-06-10T04:28:11.000Z" itemprop="datePublished">2018-06-10</time>
+        <a href="/2018/06/24/并查集/">
+            <time datetime="2018-06-24T08:08:06.000Z" itemprop="datePublished">2018-06-24</time>
         </a>
     </div>
 
@@ -213,13 +213,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/数据库/">数据库</a>
+        <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Bug/">Bug</a>
+        <a class="tag-link" href="/tags/并查集/">并查集</a>, <a class="tag-link" href="/tags/树/">树</a>, <a class="tag-link" href="/tags/森林/">森林</a>
     </div>
 
                     </div>
@@ -230,18 +230,30 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="遇到问题：SQL-Error-1064-SQLState-42000"><a href="#遇到问题：SQL-Error-1064-SQLState-42000" class="headerlink" title="遇到问题：SQL Error: 1064, SQLState: 42000"></a>遇到问题：SQL Error: 1064, SQLState: 42000</h2><p>今天在使用JavaEE连接MySQL数据库插入数据时，遇到了如下问题：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARN SQL Error: <span class="number">1064</span>, SQLState: <span class="number">42000</span></span><br><span class="line">ERROR  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version <span class="keyword">for</span> the right syntax to use near <span class="string">'group(..., order) values (...,  1)'</span> at line <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+            <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>并查集是一种树型的数据结构，用于处理一些不相交集合的合并及查询问题。常常在使用中以森林来表示。它的名字中“并”、“查”、“集”分别取字union、find、set这3个单词。它支持以下三种操作：</p>
+<ol>
+<li><p>初始化：将集合中的每一个元素都初始化为只有一个单元素的子集合。</p>
+</li>
+<li><p>查找：查找集合中某个元素所在的子集合，并返回该子集合的名称。</p>
+</li>
+<li><p>合并：将两个集合合并。</p>
+</li>
+</ol>
 <a id="more"></a>
-<p><em>上面的 “…”是其他一些不重要的数据库字段</em></p>
-<h2 id="Debug过程"><a href="#Debug过程" class="headerlink" title="Debug过程"></a>Debug过程</h2><h3 id="Round-1"><a href="#Round-1" class="headerlink" title="Round 1:"></a>Round 1:<br></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;既然这个表是插不进数据了，那我索性换张表，重新建了一张名为group2的表，然后再次尝试。<br><br>&nbsp;&nbsp;&nbsp;&nbsp;果然！结果有了一些小小的变化<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARN SQL Error: <span class="number">1064</span>, SQLState: <span class="number">42000</span></span><br><span class="line">ERROR  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version <span class="keyword">for</span> the right syntax to use near <span class="string">'order) values (...,  1)'</span> at line <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
-<p>但我还是没发现问题所在，始终不明白错在哪里。</p>
-<h3 id="Round-2"><a href="#Round-2" class="headerlink" title="Round 2:"></a>Round 2:<br></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;遇到问题不会就百度嘛~ <br><br>&nbsp;&nbsp;&nbsp;&nbsp;百度出来一大堆答案，得到的答案也基本大同小异，都说是数据库字段与SQL保留字段（关键字）冲突。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;根据百度的提示一眼就发现order,这个字段是问题所在，改成了其他名称，重新尝试插入数据，结果发现错误仍然不变！<br><br>&nbsp;&nbsp;&nbsp;&nbsp;又尝试了无数次，多遍检查字段名，我开始有点绝望。</p>
-<h3 id="Round-3"><a href="#Round-3" class="headerlink" title="Round 3:"></a>Round 3:<br></h3><p><em>蓦然回首，那人却在灯火阑珊处</em></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;双手离开键盘，有点无奈。<br>&nbsp;&nbsp;&nbsp;&nbsp;问题应该是字段与SQL保留字段冲突了，但我错在哪里了呢？看了一遍又一遍的错误信息，我终于想起了SQL里还有一个关键字叫做“group”，用于分组。原来是我的表名冲突了！改好表名之后，问题也就解决了，一切都正常了。</p>
-<h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><ul>
-<li>在这次debug，我用了控制变量法(中学科学实验时，一个十分常用的实验方法，被我用在写代码里，适用性挺强的)，这是我常用的debug方法之一。这个方法虽然很多时候能帮我迅速找到问题代码所在，但遇到这次多处出错的时候，这个办法有点不够用了。</li>
-<li>在解决问题之后，我重新回忆了我的debug(写bug)过程,发现我在Round 1时，已经误打误撞的换了表名，但我并没有深究这背后的原因，错过了解决bug的一次机会。</li>
+<h2 id="算法实现（C-C-）"><a href="#算法实现（C-C-）" class="headerlink" title="算法实现（C/C++）"></a>算法实现（C/C++）</h2><ul>
+<li><h3 id="结构定义"><a href="#结构定义" class="headerlink" title="结构定义"></a>结构定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MAXN = <span class="number">10000</span>;</span><br><span class="line"><span class="keyword">int</span> father[MAXN]; <span class="comment">//集合元素数组</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        father[i] = i; <span class="comment">//把每个子集合的根结点设为自己，也可以是-1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p>  返回元素x所在子集合的根结点</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findFather</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (x != father[x]) &#123;</span><br><span class="line">        x = father[x];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><p>  如果两个集合根元素不同则合并，如果相同则说明两个集合是同一个集合的子集，不需要合并。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">unionSet</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> fatherA = findFather(a);</span><br><span class="line">    <span class="keyword">int</span> fatherB = findFather(b);</span><br><span class="line">    <span class="keyword">if</span> (fatherA != fatherB) &#123;</span><br><span class="line">        father[fatherA] = fatherB;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="路径压缩"><a href="#路径压缩" class="headerlink" title="路径压缩"></a>路径压缩</h2><p>上面讲的查找函数是没有经过优化的，当集合路径很长的情况下，显然，查找效率会很低。我们使用并查集的时候，如果只需要得到根结点（子集合名称）即可，与路径无关，那么我们就可以将所有的子元素的父结点直接指向根结点即可。</p>
+<p>优化后的查找函数:</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findFather</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> xCopy = x;</span><br><span class="line">    <span class="keyword">while</span> (x != father[x]) &#123;</span><br><span class="line">        x = father[x];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//到这里x的值已经变成根结点的值了。</span></span><br><span class="line">    <span class="comment">//下面将路径上的所有结点的父结点都改为根结点</span></span><br><span class="line">    <span class="keyword">while</span> (xCopy != father[xCopy]) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = xCopy;</span><br><span class="line">        xCopy = father[xCopy];</span><br><span class="line">        father[temp] = x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
         
@@ -253,7 +265,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/06/10/一次SQL-Error/" data-id="cjiskwt1a0000hwo00mk8jlco" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/06/24/并查集/" data-id="cjiskwt2x0001hwo0tllivmi9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -328,15 +340,11 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/06/23/平衡二叉-AVL-树/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    平衡二叉树(AVL树)
-                
-            </div>
-        </a>
     
+        <a href="/2018/06/23/平衡二叉-AVL-树/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">平衡二叉树(AVL树)</div>
+        </a>
     
 </nav>
 
