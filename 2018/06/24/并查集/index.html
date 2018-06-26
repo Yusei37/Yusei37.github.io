@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Yusei的博客">
 <meta property="og:description" content="定义并查集是一种树型的数据结构，用于处理一些不相交集合的合并及查询问题。常常在使用中以森林来表示。它的名字中“并”、“查”、“集”分别取字union、find、set这3个单词。它支持以下三种操作：  初始化：将集合中的每一个元素都初始化为只有一个单元素的子集合。  查找：查找集合中某个元素所在的子集合，并返回该子集合的名称。  合并：将两个集合合并。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-24T08:36:05.966Z">
+<meta property="og:updated_time" content="2018-06-26T11:56:20.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="并查集">
 <meta name="twitter:description" content="定义并查集是一种树型的数据结构，用于处理一些不相交集合的合并及查询问题。常常在使用中以森林来表示。它的名字中“并”、“查”、“集”分别取字union、find、set这3个单词。它支持以下三种操作：  初始化：将集合中的每一个元素都初始化为只有一个单元素的子集合。  查找：查找集合中某个元素所在的子集合，并返回该子集合的名称。  合并：将两个集合合并。">
@@ -240,7 +240,7 @@
 </li>
 </ol>
 <a id="more"></a>
-<h2 id="算法实现（C-C-）"><a href="#算法实现（C-C-）" class="headerlink" title="算法实现（C/C++）"></a>算法实现（C/C++）</h2><ul>
+<h2 id="算法实现（C）"><a href="#算法实现（C）" class="headerlink" title="算法实现（C）"></a>算法实现（C）</h2><ul>
 <li><h3 id="结构定义"><a href="#结构定义" class="headerlink" title="结构定义"></a>结构定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MAXN = <span class="number">10000</span>;</span><br><span class="line"><span class="keyword">int</span> father[MAXN]; <span class="comment">//集合元素数组</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        father[i] = i; <span class="comment">//把每个子集合的根结点设为自己，也可以是-1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -265,7 +265,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/06/24/并查集/" data-id="cjiskwt2x0001hwo0tllivmi9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/06/24/并查集/" data-id="cjivmyg4v0007aso08cy6qm8y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
