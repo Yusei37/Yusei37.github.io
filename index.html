@@ -150,11 +150,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                4
+                5
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                7
+                9
                 <span>标签</span>
             </div>
         </div>
@@ -185,6 +185,138 @@
 
             
             <section id="main">
+    <article id="post-Java基础之“goto”" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/07/07/Java基础之“goto”/">Java基础之“goto”</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/07/07/Java基础之“goto”/">
+            <time datetime="2018-07-07T06:24:27.000Z" itemprop="datePublished">2018-07-07</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Java/">Java</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Thinking-in-Java/">Thinking in Java</a>, <a class="tag-link" href="/tags/控制执行流程/">控制执行流程</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p><img src="/2018/07/07/Java基础之“goto”/文字-25.jpg" alt=""></p>
+<h2 id="goto"><a href="#goto" class="headerlink" title="goto"></a>goto</h2><p><strong>goto</strong>起源于汇编语言的程序控制：“若条件A成立，则跳转到这里；否则跳到哪里”。但在我们学习结构化程序设计时，一般都部长我们使用goto语句。过多的goto会造成程序流程的混乱，同时使理解和调试程序都变得困难。</p></p>
+            <p class="article-more-link">
+                <a href="/2018/07/07/Java基础之“goto”/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://yusei37.github.io/2018/07/07/Java基础之“goto”/" data-id="cjjb2n3z10000vso04medmslj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-PAT1034-Head-of-a-Gang" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -241,7 +373,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/06/29/PAT1034-Head-of-a-Gang/" data-id="cjj0yr6350000hoo0u9s6rltc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/06/29/PAT1034-Head-of-a-Gang/" data-id="cjjb2n48x0006vso0m65v6af6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -380,7 +512,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/06/24/并查集/" data-id="cjj0yr63p0007hoo0p101hy0q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/06/24/并查集/" data-id="cjjb2n48v0005vso0umi9ev92" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -511,7 +643,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/06/23/平衡二叉-AVL-树/" data-id="cjj0yr63f0002hoo0uupixx57" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/06/23/平衡二叉-AVL-树/" data-id="cjjb2n48n0002vso0w5qzy4u4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -642,7 +774,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/06/10/一次SQL-Error/" data-id="cjj0yr63n0006hoo0m4hu9crq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/06/10/一次SQL-Error/" data-id="cjjb2n48z0007vso0fhdseddn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -731,6 +863,15 @@
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>
+                            <p class="item-title"><a href="/2018/07/07/Java基础之“goto”/" class="title">Java基础之“goto”</a></p>
+                            <p class="item-date"><time datetime="2018-07-07T06:24:27.000Z" itemprop="datePublished">2018-07-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/PAT/">PAT</a></p>
                             <p class="item-title"><a href="/2018/06/29/PAT1034-Head-of-a-Gang/" class="title">PAT1034 Head of a Gang</a></p>
                             <p class="item-date"><time datetime="2018-06-29T14:25:24.000Z" itemprop="datePublished">2018-06-29</time></p>
@@ -773,7 +914,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PAT/">PAT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAT/">PAT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -782,7 +923,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Bug/" style="font-size: 10px;">Bug</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/平衡二叉树/" style="font-size: 10px;">平衡二叉树</a> <a href="/tags/并查集/" style="font-size: 20px;">并查集</a> <a href="/tags/树/" style="font-size: 20px;">树</a> <a href="/tags/森林/" style="font-size: 10px;">森林</a>
+            <a href="/tags/Bug/" style="font-size: 10px;">Bug</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/Thinking-in-Java/" style="font-size: 10px;">Thinking in Java</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/平衡二叉树/" style="font-size: 10px;">平衡二叉树</a> <a href="/tags/并查集/" style="font-size: 20px;">并查集</a> <a href="/tags/控制执行流程/" style="font-size: 10px;">控制执行流程</a> <a href="/tags/树/" style="font-size: 20px;">树</a> <a href="/tags/森林/" style="font-size: 10px;">森林</a>
         </div>
     </div>
 
