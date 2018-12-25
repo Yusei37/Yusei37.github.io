@@ -3,23 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Java基础之“goto” | Yusei的博客</title>
+    <title>设计模式之单例模式 | Yusei的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="gotogoto起源于汇编语言的程序控制：“若条件A成立，则跳转到这里；否则跳到哪里”。但在我们学习结构化程序设计时，一般都部长我们使用goto语句。过多的goto会造成程序流程的混乱，同时使理解和调试程序都变得困难。">
-<meta name="keywords" content="Thinking in Java,控制执行流程">
+    <meta name="description" content="今天面试的时候被要求手写单例模式代码。虽然并不难，但是我并没有学过设计模式，没准备这方面的内容，写不出来。回来之后，好好恶补一波！ 单例模式单例模式是最常用的设计模式。这也是最常见的面试知识点之一，从中能够提出很多细致有趣的后续问题。不仅能够考查面试人员对设计模式的知识了解程度，还能够考查到编程能力、多线程的概念等内容。">
+<meta name="keywords" content="单例模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础之“goto”">
-<meta property="og:url" content="https://yusei37.github.io/2018/07/07/Java基础之“goto”/index.html">
+<meta property="og:title" content="设计模式之单例模式">
+<meta property="og:url" content="https://yusei37.github.io/2018/12/25/设计模式之单例模式/index.html">
 <meta property="og:site_name" content="Yusei的博客">
-<meta property="og:description" content="gotogoto起源于汇编语言的程序控制：“若条件A成立，则跳转到这里；否则跳到哪里”。但在我们学习结构化程序设计时，一般都部长我们使用goto语句。过多的goto会造成程序流程的混乱，同时使理解和调试程序都变得困难。">
+<meta property="og:description" content="今天面试的时候被要求手写单例模式代码。虽然并不难，但是我并没有学过设计模式，没准备这方面的内容，写不出来。回来之后，好好恶补一波！ 单例模式单例模式是最常用的设计模式。这也是最常见的面试知识点之一，从中能够提出很多细致有趣的后续问题。不仅能够考查面试人员对设计模式的知识了解程度，还能够考查到编程能力、多线程的概念等内容。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://yusei37.github.io/2018/07/07/Java基础之“goto”/文字-25.jpg">
-<meta property="og:image" content="https://yusei37.github.io/2018/07/07/Java基础之“goto”/result.png">
-<meta property="og:updated_time" content="2018-07-07T07:18:32.808Z">
+<meta property="og:updated_time" content="2018-12-25T04:58:09.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java基础之“goto”">
-<meta name="twitter:description" content="gotogoto起源于汇编语言的程序控制：“若条件A成立，则跳转到这里；否则跳到哪里”。但在我们学习结构化程序设计时，一般都部长我们使用goto语句。过多的goto会造成程序流程的混乱，同时使理解和调试程序都变得困难。">
-<meta name="twitter:image" content="https://yusei37.github.io/2018/07/07/Java基础之“goto”/文字-25.jpg">
+<meta name="twitter:title" content="设计模式之单例模式">
+<meta name="twitter:description" content="今天面试的时候被要求手写单例模式代码。虽然并不难，但是我并没有学过设计模式，没准备这方面的内容，写不出来。回来之后，好好恶补一波！ 单例模式单例模式是最常用的设计模式。这也是最常见的面试知识点之一，从中能够提出很多细致有趣的后续问题。不仅能够考查面试人员对设计模式的知识了解程度，还能够考查到编程能力、多线程的概念等内容。">
     
 
     
@@ -192,7 +189,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-Java基础之“goto”" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-设计模式之单例模式" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -200,7 +197,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Java基础之“goto”
+            设计模式之单例模式
         </h1>
     
 
@@ -209,8 +206,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/07/07/Java基础之“goto”/">
-            <time datetime="2018-07-07T06:24:27.000Z" itemprop="datePublished">2018-07-07</time>
+        <a href="/2018/12/25/设计模式之单例模式/">
+            <time datetime="2018-12-25T03:58:22.000Z" itemprop="datePublished">2018-12-25</time>
         </a>
     </div>
 
@@ -218,13 +215,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Java/">Java</a>
+        <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Thinking-in-Java/">Thinking in Java</a>, <a class="tag-link" href="/tags/控制执行流程/">控制执行流程</a>
+        <a class="tag-link" href="/tags/单例模式/">单例模式</a>
     </div>
 
                     </div>
@@ -235,17 +232,24 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p><img src="/2018/07/07/Java基础之“goto”/文字-25.jpg" alt=""></p>
-<h2 id="goto"><a href="#goto" class="headerlink" title="goto"></a>goto</h2><p><strong>goto</strong>起源于汇编语言的程序控制：“若条件A成立，则跳转到这里；否则跳到哪里”。但在我们学习结构化程序设计时，一般都部长我们使用goto语句。过多的goto会造成程序流程的混乱，同时使理解和调试程序都变得困难。</p>
+            <p>今天面试的时候被要求手写单例模式代码。虽然并不难，但是我并没有学过设计模式，没准备这方面的内容，写不出来。回来之后，好好恶补一波！</p>
+<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><p>单例模式是最常用的设计模式。这也是最常见的面试知识点之一，从中能够提出很多细致有趣的后续问题。不仅能够考查面试人员对设计模式的知识了解程度，还能够考查到编程能力、多线程的概念等内容。</p>
 <a id="more"></a>
-<p>尽管<strong>goto</strong>是Java中的一个保留字，但在语言中并没未被使用。而Java中结合break、continue与标签(label)可以实现与goto一样的跳转。</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>标签是后面跟冒号的标识符，如下所示:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">label1:</span><br></pre></td></tr></table></figure></p>
-<p>break和continue单独使用只会中断当前循环，但如果和标签一起使用，它们不仅会中断循环，而且会直接跳转直标签处。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>下面是《Thinking in Java》上的一个例子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LabledFor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        outer: <span class="comment">//外层标签</span></span><br><span class="line">        <span class="keyword">for</span> (;<span class="keyword">true</span>;) &#123;</span><br><span class="line">            inner: <span class="comment">//内层标签</span></span><br><span class="line">            <span class="keyword">for</span> (; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">                System.out.println(<span class="string">"i = "</span> + i);</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">                    System.out.println(<span class="string">"continue"</span>);</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">3</span>) &#123;</span><br><span class="line">                    System.out.println(<span class="string">"break"</span>);</span><br><span class="line">                    i++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">7</span>) &#123;</span><br><span class="line">                    System.out.println(<span class="string">"continue outer"</span>);</span><br><span class="line">                    i++;</span><br><span class="line">                    <span class="keyword">continue</span> outer;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">8</span>) &#123;</span><br><span class="line">                    System.out.println(<span class="string">"break outer"</span>);</span><br><span class="line">                    <span class="keyword">break</span> outer;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">5</span>; k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (k == <span class="number">3</span>) &#123;</span><br><span class="line">                        System.out.println(<span class="string">"continue inner"</span>);</span><br><span class="line">                        <span class="keyword">continue</span> inner;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>输出结果:</p>
-<p><img src="/2018/07/07/Java基础之“goto”/result.png" alt="输出结果"></p>
-<h2 id="一些想法与感受"><a href="#一些想法与感受" class="headerlink" title="一些想法与感受"></a>一些想法与感受</h2><p>似乎之前学习Java没听人提起过label，我一直以为break和continue后面不能跟任何代码。这次重新学习,不仅填补了我的知识漏洞，也让我对Java程序流程控制有了新的理解。</p>
-<p>虽然“goto”的名声不好，但主要原因是因为滥用，合理运用“goto”，或许能帮助你更有效地实现控制流程。</p>
+<h3 id="单例模式代码1（JAVA）"><a href="#单例模式代码1（JAVA）" class="headerlink" title="单例模式代码1（JAVA）"></a>单例模式代码1（JAVA）</h3>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面这段代码是一个简单的单例模式代码。从代码中可以看出，只有在第一次调用getInstance()方法时，实例才会被创建，这使用到了一种叫做被动初始化的技术。</p>
+<p>然而这段代码并不是线程安全的，仅在单线程环境中才能正常工作，多线程环境下就有可能创建多个实例。</p>
+<h3 id="单例模式代码2（JAVA）"><a href="#单例模式代码2（JAVA）" class="headerlink" title="单例模式代码2（JAVA）"></a>单例模式代码2（JAVA）</h3>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>要实现线程安全并不难，只需要在getInstance()方法前加上synchronize的访问控制即可。</p>
+<p>但这个解决方案也是存在缺点的，即它的使用成本高。每次对单例类的访问都需要先获取这个进程锁，但实际使用时，我们一般只需要在创建实例时使用锁，也就是仅在第一次调用实例时使用锁。</p>
+<h3 id="单例模式代码3（JAVA）"><a href="#单例模式代码3（JAVA）" class="headerlink" title="单例模式代码3（JAVA）"></a>单例模式代码3（JAVA）</h3>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span>(Singleton.class) &#123;</span><br><span class="line">                instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  上述代码解决了代码2的问题，仅对关键代码进行了同步，但却又产生了线程不安全的问题。</p>
+<p>  考虑一下场景：线程1进入代码段中，但在它能够实例化单例类之前，线程被抢占。随后，另一个线程进入if代码段。虽然这时第二个线程需要等待第一个线程完成之前的运算，但我们仍然会创建两个不同的单一实例。</p>
+<h3 id="单例模式代码4（JAVA）"><a href="#单例模式代码4（JAVA）" class="headerlink" title="单例模式代码4（JAVA）"></a>单例模式代码4（JAVA）</h3>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span>(Singleton.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  这段代码使用了双重同步锁，通过二次检查就解决了代码3的线程不安全问题。</p>
+<h3 id="单例模式代码5（JAVA）"><a href="#单例模式代码5（JAVA）" class="headerlink" title="单例模式代码5（JAVA）"></a>单例模式代码5（JAVA）</h3>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>前几个例子都是被动实例化，代码5在加载类时就直接实例化单例类，同时也是线程安全的，代码更简洁。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>单例模式还是很简单的，代码也不是很难。很遗憾自己没有好好准备这方面的内容。</p>
+<p>继续努力！</p>
 
         
         </div>
@@ -256,7 +260,7 @@
 
 </div>
 
-    <a data-url="https://yusei37.github.io/2018/07/07/Java基础之“goto”/" data-id="cjq3a62zs0001fco0w6g13hcb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yusei37.github.io/2018/12/25/设计模式之单例模式/" data-id="cjq3a63190005fco00k11z9ev" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -331,19 +335,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/07/29/考研碎碎念/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    考研碎碎念
-                
-            </div>
-        </a>
     
-    
-        <a href="/2018/06/29/PAT1034-Head-of-a-Gang/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/09/09/运气一般留给做好准备的人/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">PAT1034 Head of a Gang</div>
+            <div class="article-nav-title">运气一般留给做好准备的人</div>
         </a>
     
 </nav>
